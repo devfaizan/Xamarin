@@ -2,4 +2,15 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/FWUtils/obj/Debug
+/FWUtils.Droid/bin/Debug
+/FWUtils.Droid/obj/Debug
+/FWUtils.Droid/Resources
+/FWUtils.PCL/bin/Debug
+/FWUtils.PCL/obj/Debug
+/PDFToImage.Droid/bin/Debug
+/PDFToImage.Droid/obj
+/PDFToImage.Droid/PDFToImage.Droid.csproj.user
+/PDFToImage.Droid/GettingStarted.Xamarin
+/PDFToImage.Droid/Videos - Shortcut.lnk
+/PDFToImage.Droid/Resources/Resource.Designer.cs
+/PDFToImage.Droid/Resources/AboutResources.txt
