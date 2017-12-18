@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDFToImage.Droid", "PDFToImage.Droid\PDFToImage.Droid.csproj", "{003821D9-022E-468B-8D7C-58D1A9AE55CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FWUtils.Droid", "FWUtils.Droid\FWUtils.Droid.csproj", "{5D874FCE-9117-457A-9A6D-AE4BA03AEF13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FWUtils.PCL", "FWUtils.PCL\FWUtils.PCL.csproj", "{5DA90109-0924-442B-A92E-5963773FCCA3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{003821D9-022E-468B-8D7C-58D1A9AE55CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{003821D9-022E-468B-8D7C-58D1A9AE55CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{003821D9-022E-468B-8D7C-58D1A9AE55CA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{003821D9-022E-468B-8D7C-58D1A9AE55CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{003821D9-022E-468B-8D7C-58D1A9AE55CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{003821D9-022E-468B-8D7C-58D1A9AE55CA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{5D874FCE-9117-457A-9A6D-AE4BA03AEF13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D874FCE-9117-457A-9A6D-AE4BA03AEF13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D874FCE-9117-457A-9A6D-AE4BA03AEF13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D874FCE-9117-457A-9A6D-AE4BA03AEF13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DA90109-0924-442B-A92E-5963773FCCA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DA90109-0924-442B-A92E-5963773FCCA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DA90109-0924-442B-A92E-5963773FCCA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DA90109-0924-442B-A92E-5963773FCCA3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
