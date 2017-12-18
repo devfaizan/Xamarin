@@ -13,7 +13,7 @@ using Android.Widget;
 namespace FWUtils.Droid.Interfaces
 {
     /// <summary>
-    /// Consists of signature on activity used in WebViewClient activity
+    /// Consists of signature on activity used in ExtendedWebViewClient activity
     /// </summary>
     public interface IWebViewClientActivity
     {
