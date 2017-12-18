@@ -1,4 +1,4 @@
-# Xamarin (In Progress)
+# Xamarin
 Custom controls and pattern classes for xamarin/xamarin.forms
 
 # FWUtils.Droid
