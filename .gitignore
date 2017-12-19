@@ -17,3 +17,5 @@
 /.vs/Xamarin/v14
 /.vs/Xamarin/v14/.suo
 /packages
+/FWUtils.Droid/FWUtils.Droid.csproj.bak
+/PDFToImage.Droid/PDFToImage.Droid.csproj.bak

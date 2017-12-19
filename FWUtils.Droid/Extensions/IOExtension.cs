@@ -43,7 +43,7 @@ namespace FWUtils.Droid.Extensions
             var stream = new FileStream(path, FileMode.OpenOrCreate);
             using (stream)
             {
-                bitmap.Compress(Bitmap.CompressFormat.Png, 100, stream);
+                bitmap.Compress(Bitmap.CompressFormat.Jpeg, 100, stream);
                 bitmap.AddImageToGallery(path, context);
                 stream.Flush();
                 stream.Close();

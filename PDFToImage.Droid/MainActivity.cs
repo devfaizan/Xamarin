@@ -45,13 +45,25 @@ namespace PDFToImage.Droid
             btnConvert = FindViewById<Button>(Resource.Id.button1);
             progressDialog = new ProgressDialog(this);
 
-            txtUrl.Text = "http://altwebtest01.zaifworks.com/CertDownload.aspx?code=cert-10075-99ZH";
+            // test pdfs
+            var page1 = "http://unec.edu.az/application/uploads/2014/12/pdf-sample.pdf";
+            var page2 = "http://www.menatelecom.com/media/document/pdfsample.pdf";
+            var page3 = "https://www.antennahouse.com/XSLsample/pdf-v32/Sample-multi-pdf3.pdf";
+            var page4 = "https://www.ets.org/Media/Tests/GRE/pdf/gre_research_validity_data.pdf";
+            var page5 = "http://www.pdf995.com/samples/pdf.pdf";
+
+            txtUrl.Text = page4;
             btnConvert.Click += BtnConvert_Click;
         }
 
         private void BtnConvert_Click(object sender, EventArgs e)
         {
             url = gViewURL + txtUrl.Text;
+
+            if (webview != null)
+                mainLayout.RemoveView(webview);
+
+            webview = new WebView(this);
 
             mainLayout.AddView(webview, new LinearLayout.LayoutParams(1354, 100000));
 
@@ -103,7 +115,7 @@ namespace PDFToImage.Droid
                 var json = result as Java.Lang.String;
                 var str = result.ToString();
                 var jsonObject = Newtonsoft.Json.JsonConvert.DeserializeObject<JsonReturn>(str);
-                if (!jsonObject.loaded && webview2 == null)
+                if (jsonObject != null && !jsonObject.loaded && webview2 == null)
                     await LoadPDF();
                 else
                 {
@@ -114,15 +126,18 @@ namespace PDFToImage.Droid
                         webview2.SetBackgroundColor(Color.White);
                         webview2.Settings.JavaScriptEnabled = true;
                         webview2.Settings.SetPluginState(WebSettings.PluginState.On);
-                        mainLayout.AddView(webview2, new LinearLayout.LayoutParams(1354, Convert.ToInt32(jsonObject.result)));
-                        await Task.Delay(TimeSpan.FromSeconds(15));
+
+                        int height = (int)Android.Util.TypedValue.ApplyDimension(Android.Util.ComplexUnitType.Dip, Convert.ToInt32(jsonObject.result), this.Resources.DisplayMetrics);
+
+                        mainLayout.AddView(webview2, new LinearLayout.LayoutParams(1354, height));
+                        await Task.Delay(TimeSpan.FromSeconds(2));
                         await CheckIfPDFRendered();
 
                     }
                     else if (jsonObject.loaded)
                     {
                         var image = webview2.ToImage();
-                        image.SaveAndAddToGallery(Android.OS.Environment.DirectoryDownloads, Guid.NewGuid().ToString() + ".png", this);
+                        image.SaveAndAddToGallery(Android.OS.Environment.DirectoryDownloads, Guid.NewGuid().ToString() + ".jpeg", this);
                         Toast.MakeText(this, "Image created added to library", ToastLength.Short).Show();
                     }
                     else

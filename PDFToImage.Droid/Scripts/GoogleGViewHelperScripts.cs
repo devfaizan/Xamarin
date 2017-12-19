@@ -16,7 +16,7 @@ namespace PDFToImage.Droid.Scripts
     {
         public static readonly string ScriptGViewLoaded = "document.querySelectorAll('[role=\"document\"]')[0].clientHeight != 0";
 
-        public static readonly string ScriptGetClientHeight = "(parseInt((document.querySelectorAll('[role=\"document\"]')[0].clientHeight) * 2.05)).toString()";
+        public static readonly string ScriptGetClientHeight = "(parseInt((document.querySelectorAll('[role=\"document\"]')[0].clientHeight))).toString()";
 
         public static readonly string ScriptRemoveBar = "(function(){document.querySelectorAll('.ndfHFb-c4YZDc-q77wGc')[0].remove(); return 'done';})()";
         public static readonly string ScriptGetInnerHTML = "document.querySelectorAll('[role=\"document\"]')[0].innerHTML.toString()";
