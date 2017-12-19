@@ -18,7 +18,28 @@ namespace PDFToImage.Droid.Scripts
 
         public static readonly string ScriptGetClientHeight = "(parseInt((document.querySelectorAll('[role=\"document\"]')[0].clientHeight))).toString()";
 
-        public static readonly string ScriptRemoveBar = "(function(){document.querySelectorAll('.ndfHFb-c4YZDc-q77wGc')[0].remove(); return 'done';})()";
+        public static readonly string ScriptRemoveBar = @"(function(){ 
+                                            try{
+                                                var tooltip = document.querySelectorAll('[role=""toolbar""]');
+                                                if (tooltip.length > 0) {tooltip[0].remove();}
+                                                var parent = document.querySelectorAll('[role=""button""]')[0].parentElement;
+                                                var childs = parent.children;   
+                                                var childCount = childs.length;
+                                                if(childs.length > 0){
+                                                    for (i = 0; i < childCount - 1; i++) { 
+                                                        childs = parent.children;   
+                                                        childs[0].remove();
+                                                    }
+                                                    return true;
+                                                }
+                                                else{
+                                                    return true;
+                                                }
+                                            }
+                                            catch(err)
+                                            { return err; }
+                                          })()";
+
         public static readonly string ScriptGetInnerHTML = "document.querySelectorAll('[role=\"document\"]')[0].innerHTML.toString()";
         public static readonly string ScriptScrollBottom = @"(function(){for (i = 0; i < document.querySelectorAll('[role=""document""]')[0].children.length; i++) { 
                                        document.querySelectorAll('[role=""document""]')[0].parentElement.scrollTop 

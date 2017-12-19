@@ -104,6 +104,7 @@ namespace PDFToImage.Droid
             }
         }
 
+        bool check = false;
         /// <summary>
         /// Invokes when EvaluateJavascript gets called
         /// </summary>
@@ -136,6 +137,13 @@ namespace PDFToImage.Droid
                     }
                     else if (jsonObject.loaded)
                     {
+                        if (!check)
+                        {
+                            check = true;
+                            await CheckIfPDFRendered();
+                            return;
+                        }
+
                         var image = webview2.ToImage();
                         image.SaveAndAddToGallery(Android.OS.Environment.DirectoryDownloads, Guid.NewGuid().ToString() + ".jpeg", this);
                         Toast.MakeText(this, "Image created added to library", ToastLength.Short).Show();
