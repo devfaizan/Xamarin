@@ -11,7 +11,7 @@ using Foundation;
 namespace PDFToImage.iOS
 {
 	[Register ("WebViewController")]
-	partial class WebViewController
+	partial class PDFtoImageViewController
 	{
 		[Outlet]
 		[GeneratedCodeAttribute ("iOS Designer", "1.0")]
