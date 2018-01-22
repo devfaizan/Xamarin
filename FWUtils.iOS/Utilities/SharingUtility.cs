@@ -6,5 +6,6 @@ namespace FWUtils.iOS.Utilities
 {
     public class SharingUtility
     {
+
     }
 }
