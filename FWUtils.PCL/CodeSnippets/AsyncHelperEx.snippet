@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>AsyncHelperEx</Title>
+			<Shortcut>asynchelperex</Shortcut>
+			<Description>Inserts an Generic AsyncHelper statement with exception handling</Description>
+			<Author>FaizWorks</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>type</ID>
+					<ToolTip>Property type</ToolTip>
+					<Default>int</Default>
+				</Literal>
+        <Literal>
+					<ID>return</ID>
+					<ToolTip>return statment</ToolTip>
+					<Default>0</Default>
+				</Literal>
+				<Literal>
+					<ID>result</ID>
+					<ToolTip>Result name</ToolTip>
+					<Default>Result</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[AsyncHelper.StartAsyncTask<$type$>(() =>
+				{
+					return $return$;
+				}, ($result$) =>
+				{
+	
+				}, (ex) =>
+				{
+	
+				});]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
