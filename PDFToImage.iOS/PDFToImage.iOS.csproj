@@ -66,18 +66,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="WebViewController.designer.cs">
-      <DependentUpon>WebViewController.cs</DependentUpon>
+    <Compile Include="PDFtoImageViewController.designer.cs">
+      <DependentUpon>PDFtoImageViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="WebViewController.cs" />
-    <None Include="Views\RazorView.cshtml">
-      <Generator>RazorTemplatePreprocessor</Generator>
-      <LastGenOutput>RazorView.cs</LastGenOutput>
-    </None>
-    <Compile Include="Models\Model1.cs" />
-    <Compile Include="Views\RazorView.cs">
-      <DependentUpon>RazorView.cshtml</DependentUpon>
-    </Compile>
+    <Compile Include="PDFtoImageViewController.cs" />
     <BundleResource Include="Resources\style.css" />
   </ItemGroup>
   <ItemGroup>
@@ -89,7 +81,14 @@
       <Visible>false</Visible>
     </ImageAsset>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\FWUtils.iOS\FWUtils.iOS.csproj">
+      <Project>{51334b3b-a466-4683-92e2-a8ec63f406f1}</Project>
+      <Name>FWUtils.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Web.Services" />
   </ItemGroup>
@@ -102,5 +101,6 @@
   <ItemGroup>
     <Content Include="Entitlements.plist" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
