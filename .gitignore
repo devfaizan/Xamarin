@@ -19,3 +19,8 @@
 /packages
 /FWUtils.Droid/FWUtils.Droid.csproj.bak
 /PDFToImage.Droid/PDFToImage.Droid.csproj.bak
+/PDFToImage.iOS/PDFToImage.iOS.csproj.user
+/PDFToImage.iOS/obj/iPhoneSimulator/Debug
+/PDFToImage.iOS/bin/iPhoneSimulator/Debug
+/FWUtils.iOS/obj/Debug
+/FWUtils.iOS/bin/Debug
