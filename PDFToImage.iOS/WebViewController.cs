@@ -59,7 +59,7 @@ namespace PDFToImage.iOS
             await Task.Delay(TimeSpan.FromSeconds(5));
 
             UIImage image;
-            UIGraphics.BeginImageContext(WebView.Frame.Size);
+            UIGraphics.BeginImageContextWithOptions(WebView.Frame.Size, false, 0.0f); //This helps to produce fine quality image
             View.Layer.RenderInContext(UIGraphics.GetCurrentContext());
             image = UIGraphics.GetImageFromCurrentImageContext();
             UIGraphics.EndImageContext();
